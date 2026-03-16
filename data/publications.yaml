@@ -1,0 +1,52 @@
+- title: "Structural and non-isomorphism results for $q$-Araki-Woods factors"
+  coauthors: '<a href="https://tanhui3.wordpress.com">H. Tan</a>'
+  arxiv_id: "2509.21636"
+  arxiv: "https://arxiv.org/abs/2509.21636"
+
+- title: "Relative solidity for biexact groups in measure equivalence"
+  coauthors: '<a href="https://sites.google.com/view/danieldrimbe">D. Drimbe</a>'
+  arxiv_id: "2503.24167"
+  arxiv: "https://arxiv.org/abs/2503.24167"
+
+- title: "A unique Cartan subalgebra result for Bernoulli actions of weakly amenable groups"
+  arxiv_id: "2404.08182"
+  arxiv: "https://arxiv.org/abs/2404.08182"
+  journal:
+    name: "Journal of Functional Analysis"
+    url: "https://doi.org/10.1016/j.jfa.2025.110852"
+
+- title: "Biexact von Neumann algebras"
+  coauthors: '<a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a>'
+  arxiv_id: "2309.10161"
+  arxiv: "https://arxiv.org/abs/2309.10161"
+
+- title: "First $\\ell^2$-Betti numbers and proper proximality"
+  arxiv_id: "2211.05951"
+  arxiv: "https://arxiv.org/abs/2211.05951"
+  journal:
+    name: "Advances in Mathematics"
+    url: "https://doi.org/10.1016/j.aim.2023.109467"
+
+- title: "On the structure of relatively biexact group von Neumann algebras"
+  coauthors: '<a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a>'
+  arxiv_id: "2211.05298"
+  arxiv: "https://arxiv.org/abs/2211.05298"
+  journal:
+    name: "Communications in Mathematical Physics"
+    url: "https://doi.org/10.1007/s00220-024-04987-8"
+
+- title: "Properly proximal von Neumann algebras"
+  coauthors: '<a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a> and <a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a>'
+  arxiv_id: "2204.00517"
+  arxiv: "https://arxiv.org/abs/2204.00517"
+  journal:
+    name: "Duke Mathematical Journal"
+    url: "https://doi.org/10.1215/00127094-2022-0098"
+
+- title: "Proper proximality for various families of groups"
+  coauthors: '<a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a>'
+  arxiv_id: "2107.02917"
+  arxiv: "https://arxiv.org/abs/2107.02917"
+  journal:
+    name: "Groups, Geometry, and Dynamics"
+    url: "https://doi.org/10.4171/ggd/778"

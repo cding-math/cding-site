@@ -1,0 +1,189 @@
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+:root {
+  --text: #2c2c2c;
+  --text-secondary: #666;
+  --bg: #fafaf8;
+  --link: #2c2c2c;
+  --link-hover: #555;
+  --border: #e0e0e0;
+  --max-width: 760px;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* Header */
+.site-header {
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.site-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.site-subtitle a {
+  color: var(--text);
+}
+
+/* Photo */
+.photo {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.photo img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* margin */
+.intro-text p {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Sections */
+.section {
+  margin-top: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+/* Publication list */
+.pub-list {
+  list-style: none;
+  counter-reset: pub;
+}
+
+.pub-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pub-list li::before {
+  counter-increment: pub;
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+}
+
+.pub-coauthors {
+  color: var(--text-secondary);
+  display: block;
+}
+
+.pub-links {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.pub-links a {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-right: 0.75rem;
+}
+
+.pub-links a:hover {
+  color: var(--text);
+}
+
+/* Contact */
+.contact {
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+
+  .container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .intro {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .photo img {
+    width: 180px;
+  }
+}

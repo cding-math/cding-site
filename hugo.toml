@@ -1,0 +1,8 @@
+baseURL = 'https://cding.me/'
+languageCode = 'en-us'
+title = 'Changying Ding'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
