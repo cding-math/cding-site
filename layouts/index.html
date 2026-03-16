@@ -16,8 +16,8 @@
   <ol class="pub-list">
     {{ range .Site.Data.publications }}
     <li>
-      <strong>{{ .title }}</strong>
-      {{ with .coauthors }}<span class="pub-coauthors">(with {{ . | safeHTML }})</span>{{ end }}
+      <strong>{{ .title | safeHTML }}</strong>
+      {{ with .coauthors }}<span class="pub-coauthors">with {{ . | safeHTML }}</span>{{ end }}
       <span class="pub-links">
         {{ if .arxiv }}<a href="{{ .arxiv }}">arXiv:{{ .arxiv_id }}</a>{{ end }}
         {{ with .journal }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
@@ -29,6 +29,11 @@
 
 <div class="contact">
   <h2 class="section-title">Contact</h2>
-  <p><a href="mailto:cding@math.ucla.edu">cding@math.ucla.edu</a></p>
+  <p id="email"></p>
+  <script>
+    var u = 'cding'; var d = 'math.ucla.edu';
+    var e = document.getElementById('email');
+    e.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+  </script>
 </div>
 {{ end }}

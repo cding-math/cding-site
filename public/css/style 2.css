@@ -10,10 +10,10 @@
   --text: #2c2c2c;
   --text-secondary: #666;
   --bg: #fafaf8;
-  --link: #4a6a8a;
-  --link-hover: #3a5a7a;
+  --link: #2c2c2c;
+  --link-hover: #555;
   --border: #e0e0e0;
-  --max-width: 720px;
+  --max-width: 760px;
 }
 
 html {
@@ -26,7 +26,7 @@ body {
   font-family: 'Inter', -apple-system, sans-serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 /* Layout */
@@ -38,19 +38,19 @@ body {
 
 /* Header */
 .site-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .intro {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: stretch;
 }
 
@@ -58,19 +58,15 @@ body {
   flex: 1;
 }
 
-.intro-text p {
-  margin-bottom: 0.75rem;
-}
-
 .site-subtitle {
   font-size: 0.95rem;
-  color: var(--text);
-  line-height: 1.7;
-  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
 }
 
 .site-subtitle a {
-  color: var(--link);
+  color: var(--text);
 }
 
 /* Photo */
@@ -86,10 +82,17 @@ body {
   border-radius: 2px;
 }
 
+/* margin */
+.intro-text p {
+  margin-bottom: 0.5rem;
+}
+
+
 /* Links */
 a {
   color: var(--link);
-  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 a:hover {
@@ -131,7 +134,7 @@ a:hover {
 }
 
 .pub-coauthors {
-  color: var(--text);
+  color: var(--text-secondary);
   display: block;
 }
 
@@ -142,12 +145,12 @@ a:hover {
 
 .pub-links a {
   font-size: 0.85rem;
-  color: var(--link);
+  color: var(--text-secondary);
   margin-right: 0.75rem;
 }
 
 .pub-links a:hover {
-  color: var(--link-hover);
+  color: var(--text);
 }
 
 /* Contact */
@@ -160,6 +163,7 @@ a:hover {
 .site-footer {
   margin-top: 4rem;
   padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
@@ -179,27 +183,7 @@ a:hover {
     gap: 1.5rem;
   }
 
-  .photo {
-    justify-content: center;
-  }
-
   .photo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e8e8e6;
-    --text-secondary: #999;
-    --bg: #1a1a1a;
-    --link: #8ab4d6;
-    --link-hover: #a0c8e8;
-    --border: #333;
+    width: 180px;
   }
 }

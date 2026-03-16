@@ -24,6 +24,7 @@
   </script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+  <link rel="icon" href="/favicon.png" type="image/png">
 <body>
   <div class="container">
     
@@ -31,9 +32,9 @@
   <h1 class="site-title">Changying Ding</h1>
   <div class="intro">
     <div class="intro-text site-subtitle">
-      <p>I am a Hedrick Assistant Adjunct Professor at UCLA, working with <a href="https://www.math.ucla.edu/~popa/">Sorin Popa</a> and <a href="https://www.math.ucla.edu/~shlyakht/">Dimitri Shlyakhtenko</a>.
+      <p>I am a Hedrick Math Fellow at UCLA, working with <a href="https://www.math.ucla.edu/~popa/">Sorin Popa</a> and <a href="https://www.math.ucla.edu/~shlyakht/">Dimitri Shlyakhtenko</a>.
 I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderbilt.edu/peters10/">Jesse Peterson</a> in 2023.</p>
-<p>My CV is available <a href="/cv.pdf">here</a> and I&rsquo;m currently on the job market.</p>
+<p>My CV is available <a href="/cv.pdf">here</a>.</p>
 
     </div>
     <div class="photo">
@@ -48,7 +49,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>Structural and non-isomorphism results for $q$-Araki-Woods factors</strong>
-      <span class="pub-coauthors">(with <a href="https://tanhui3.wordpress.com">H. Tan</a>)</span>
+      <span class="pub-coauthors">with <a href="https://tanhui3.wordpress.com">H. Tan</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2509.21636">arXiv:2509.21636</a>
         
@@ -57,7 +58,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>Relative solidity for biexact groups in measure equivalence</strong>
-      <span class="pub-coauthors">(with <a href="https://sites.google.com/view/danieldrimbe">D. Drimbe</a>)</span>
+      <span class="pub-coauthors">with <a href="https://sites.google.com/view/danieldrimbe">D. Drimbe</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2503.24167">arXiv:2503.24167</a>
         
@@ -75,7 +76,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>Biexact von Neumann algebras</strong>
-      <span class="pub-coauthors">(with <a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a>)</span>
+      <span class="pub-coauthors">with <a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2309.10161">arXiv:2309.10161</a>
         
@@ -93,7 +94,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>On the structure of relatively biexact group von Neumann algebras</strong>
-      <span class="pub-coauthors">(with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a>)</span>
+      <span class="pub-coauthors">with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2211.05298">arXiv:2211.05298</a>
         <a href="https://doi.org/10.1007/s00220-024-04987-8">Communications in Mathematical Physics</a>
@@ -102,7 +103,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>Properly proximal von Neumann algebras</strong>
-      <span class="pub-coauthors">(with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a> and <a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a>)</span>
+      <span class="pub-coauthors">with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a> and <a href="https://math.vanderbilt.edu/peters10/">J. Peterson</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2204.00517">arXiv:2204.00517</a>
         <a href="https://doi.org/10.1215/00127094-2022-0098">Duke Mathematical Journal</a>
@@ -111,7 +112,7 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
     
     <li>
       <strong>Proper proximality for various families of groups</strong>
-      <span class="pub-coauthors">(with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a>)</span>
+      <span class="pub-coauthors">with <a href="https://sites.google.com/view/srivatsavke">S. Kunnawalkam Elayavalli</a></span>
       <span class="pub-links">
         <a href="https://arxiv.org/abs/2107.02917">arXiv:2107.02917</a>
         <a href="https://doi.org/10.4171/ggd/778">Groups, Geometry, and Dynamics</a>
@@ -123,7 +124,12 @@ I finished my Ph.D. at Vanderbilt University under <a href="https://math.vanderb
 
 <div class="contact">
   <h2 class="section-title">Contact</h2>
-  <p><a href="mailto:cding@math.ucla.edu">cding@math.ucla.edu</a></p>
+  <p id="email"></p>
+  <script>
+    var u = 'cding'; var d = 'math.ucla.edu';
+    var e = document.getElementById('email');
+    e.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+  </script>
 </div>
 
     <footer class="site-footer">
