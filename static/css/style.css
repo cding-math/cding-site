@@ -111,7 +111,6 @@ a:hover {
 /* Publication list */
 .pub-list {
   list-style: none;
-  counter-reset: pub;
 }
 
 .pub-list li {
@@ -122,9 +121,7 @@ a:hover {
   line-height: 1.6;
 }
 
-.pub-list li::before {
-  counter-increment: pub;
-  content: counter(pub) ".";
+.pub-num {
   position: absolute;
   left: 0;
   color: var(--text-secondary);

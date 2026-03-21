@@ -14,9 +14,11 @@
 <div class="section">
   <h2 class="section-title">Publications / Preprints</h2>
   <ol class="pub-list">
-    {{ range .Site.Data.publications }}
+    {{ $total := len .Site.Data.publications }}
+    {{ range $i, $pub := .Site.Data.publications }}
     <li>
-      <strong>{{ .title | safeHTML }}</strong>
+      <span class="pub-num">{{ sub $total $i }}.</span>
+      <strong>{{ $pub.title | safeHTML }}</strong>
       {{ with .coauthors }}<span class="pub-coauthors">with {{ . | safeHTML }}</span>{{ end }}
       <span class="pub-links">
         {{ if .arxiv }}<a href="{{ .arxiv }}">arXiv:{{ .arxiv_id }}</a>{{ end }}
