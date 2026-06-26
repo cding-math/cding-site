@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
+  <title>{{ .Title }}</title>{{ if or .IsHome .Params.katex }}
+  <link rel="stylesheet" href="/vendor/katex/katex.min.css">
+  <script defer src="/vendor/katex/katex.min.js"></script>
+  <script defer src="/vendor/katex/contrib/auto-render.min.js"
+    onload="renderMathJaxOnLoad()"></script>
+  <script>
+    function renderMathJaxOnLoad() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    }
+  </script>
+  {{ end }}
   <link rel="stylesheet" href="/css/style.css">
 </head>
   <link rel="icon" href="/favicon.png" type="image/png">
