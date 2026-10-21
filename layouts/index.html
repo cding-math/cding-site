@@ -22,7 +22,7 @@
       {{ with .coauthors }}<span class="pub-coauthors">with {{ . | safeHTML }}</span>{{ end }}
       <span class="pub-links">
         {{ if .arxiv }}<a href="{{ .arxiv }}">arXiv:{{ .arxiv_id }}</a>{{ end }}
-        {{ with .journal }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+        {{ with .journal }}{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}<span style="font-size: 0.85rem">{{ .name }}</span>{{ end }}{{ end }}
       </span>
     </li>
     {{ end }}
