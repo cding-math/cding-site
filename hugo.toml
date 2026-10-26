@@ -2,7 +2,29 @@ baseURL = 'https://cding.me/'
 languageCode = 'en-us'
 title = 'Changying Ding'
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+# Publish only the assets this site uses. Configuration files and accidental
+# additions to static/ must not become public downloads.
+[[module.mounts]]
+source = 'static'
+target = 'static'
+files = [
+  '! **/.*',
+  '_headers',
+  '_redirects',
+  'cv.pdf',
+  'favicon.png',
+  'css/*.css',
+  'js/*.js',
+  'fonts/*.woff2',
+  'images/*.jpeg',
+  'images/*.jpg',
+  'images/*.png',
+  'images/*.webp',
+  'vendor/katex/0.19.1/*.js',
+  'vendor/katex/0.19.1/*.css',
+  'vendor/katex/0.19.1/LICENSE',
+  'vendor/katex/0.19.1/contrib/auto-render.min.js',
+  'vendor/katex/0.19.1/fonts/*.woff2',
+  'vendor/katex/0.19.1/fonts/*.woff',
+  'vendor/katex/0.19.1/fonts/*.ttf',
+]

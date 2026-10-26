@@ -1,0 +1,11 @@
+.DS_Store
+.hugo_build.lock
+resources/_gen/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+gemini.json
+openai.json
+service-account*.json

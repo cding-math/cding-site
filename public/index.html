@@ -5,27 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Changying Ding</title>
-  <link rel="stylesheet" href="/vendor/katex/katex.min.css">
-  <script defer src="/vendor/katex/katex.min.js"></script>
-  <script defer src="/vendor/katex/contrib/auto-render.min.js"
-    onload="renderMathJaxOnLoad()"></script>
-  <script>
-    function renderMathJaxOnLoad() {
-      renderMathInElement(document.body, {
-        delimiters: [
-          {left: "$$", right: "$$", display: true},
-          {left: "$", right: "$", display: false}
-        ]
-      });
-    }
-  </script>
-  
+  <link rel="stylesheet" href="/vendor/katex/0.19.1/katex.min.css">
+  <script defer src="/vendor/katex/0.19.1/katex.min.js"></script>
+  <script defer src="/vendor/katex/0.19.1/contrib/auto-render.min.js"></script>
+
+  <script defer src="/js/site.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-</head>
   <link rel="icon" href="/favicon.png" type="image/png">
+</head>
 <body>
   <div class="container">
-    
+
 <header class="site-header">
   <h1 class="site-title">Changying Ding</h1>
   <div class="intro">
@@ -142,11 +132,6 @@ I received my Ph.D. from Vanderbilt University in 2023 under <a href="https://ma
 <div class="contact">
   <h2 class="section-title">Contact</h2>
   <p id="email"></p>
-  <script>
-    var u = 'cding'; var d = 'math.ucla.edu';
-    var e = document.getElementById('email');
-    e.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
-  </script>
 </div>
 
     <footer class="site-footer">

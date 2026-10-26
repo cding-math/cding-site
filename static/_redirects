@@ -1,0 +1,5 @@
+# Keep cached HTML and CSS working while retiring the old KaTeX URLs.
+/vendor/katex/katex.min.js /vendor/katex/0.19.1/katex.min.js 301
+/vendor/katex/katex.min.css /vendor/katex/0.19.1/katex.min.css 301
+/vendor/katex/contrib/auto-render.min.js /vendor/katex/0.19.1/contrib/auto-render.min.js 301
+/vendor/katex/fonts/* /vendor/katex/0.19.1/fonts/:splat 301
