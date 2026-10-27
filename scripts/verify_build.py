@@ -60,6 +60,12 @@ def check(build):
     require(core_fonts[0].stat().st_size + name_font.stat().st_size < (build / "fonts/InterVariable.woff2").stat().st_size,
             "primary font payload no longer improves on the original Inter asset")
     require((build / "fonts/Inter-OFL.txt").is_file(), "Inter license missing")
+    for prefix, vendor_name in [("katex-main.", "KaTeX_Main-Regular.woff2"), ("katex-math-italic.", "KaTeX_Math-Italic.woff2")]:
+        matches = [p for p in assets if p.name.startswith(prefix)]
+        require(len(matches) == 1, "fingerprinted math font missing")
+        require(matches[0].read_bytes() == (build / "vendor/katex/0.19.1/fonts" / vendor_name).read_bytes(),
+                "math font differs from approved vendor file")
+        require("/assets/" + matches[0].name in css, "CSS does not use fingerprinted math font")
 
     page_count = 0
     for page_path in build.rglob("*.html"):

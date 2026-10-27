@@ -16,7 +16,10 @@ It uses Node built-ins only—no npm installation or network access.
 The generated `data/math_rendered.json` is checked in. Hugo's passthrough hook
 uses that cache for Markdown and publication titles. HTML plus MathML preserves
 the existing visual rendering and accessible mathematical meaning. The same
-vendored stylesheet/fonts remain in use.
+vendored stylesheet/fonts remain in use. Hugo copies the two currently used
+WOFF2 faces to content-hashed `/assets/` URLs without altering their bytes.
+Their `swap` declarations reuse those URLs and receive immutable caching;
+legacy paths remain available for older HTML and other mathematical faces.
 
 Hugo 0.157.0's embedded math renderer was evaluated but its HTML class names do
 not match KaTeX 0.19.1's stylesheet. Do not silently substitute it or perform

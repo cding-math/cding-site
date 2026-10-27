@@ -41,7 +41,8 @@ been tested; mobile Chromium emulation on macOS still uses the host's fonts.
 
 Math arrives pre-rendered with the existing KaTeX 0.19.1 renderer, removing its
 client-side reformatting and approximately 79 KB compressed JavaScript from the
-loading path. Its two currently used font faces also use `swap`. See
+loading path. Its two currently used font faces also use `swap` and identical
+content-hashed copies under `/assets/`, with immutable caching. See
 `math-rendering.md` for the checked-in cache and maintenance workflow.
 
 Measured before/after results and their limits are in

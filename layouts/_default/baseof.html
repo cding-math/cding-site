@@ -6,7 +6,9 @@
   {{- $nameFont := resources.Get "fonts/zhuque-name.woff2" | resources.Copy "assets/zhuque-name.woff2" | fingerprint "sha256" -}}
   {{- $latinFont := resources.Get "fonts/inter-latin.woff2" | resources.Copy "assets/inter-latin.woff2" | fingerprint "sha256" -}}
   {{- $coreFont := resources.Get "fonts/inter-core.woff2" | resources.Copy "assets/inter-core.woff2" | fingerprint "sha256" -}}
-  {{- $styles := resources.Get "css/style.css" | resources.ExecuteAsTemplate "assets/site.css" (dict "NameFont" $nameFont "LatinFont" $latinFont "CoreFont" $coreFont) | minify | fingerprint "sha256" -}}
+  {{- $mathMainFont := resources.FromString "assets/katex-main.woff2" (os.ReadFile "static/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2") | fingerprint "sha256" -}}
+  {{- $mathItalicFont := resources.FromString "assets/katex-math-italic.woff2" (os.ReadFile "static/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2") | fingerprint "sha256" -}}
+  {{- $styles := resources.Get "css/style.css" | resources.ExecuteAsTemplate "assets/site.css" (dict "NameFont" $nameFont "LatinFont" $latinFont "CoreFont" $coreFont "MathMainFont" $mathMainFont "MathItalicFont" $mathItalicFont) | minify | fingerprint "sha256" -}}
   {{- $script := resources.Get "js/site.js" | resources.Copy "assets/site.js" | minify | fingerprint "sha256" -}}
 {{ if .IsHome }}
   <link rel="preload" href="{{ $coreFont.RelPermalink }}" as="font" type="font/woff2" crossorigin>

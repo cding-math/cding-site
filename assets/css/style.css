@@ -60,14 +60,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2') format('woff2');
+  src: url('{{ .MathMainFont.RelPermalink }}') format('woff2');
 }
 @font-face {
   font-family: KaTeX_Math;
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2') format('woff2');
+  src: url('{{ .MathItalicFont.RelPermalink }}') format('woff2');
 }
 
 /* Reset */
