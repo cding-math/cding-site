@@ -7,7 +7,22 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Strict-Transport-Security: max-age=2592000
   Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-src 'self' https://challenges.cloudflare.com; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
-  Cache-Control: public, max-age=3600, must-revalidate
+
+# Only content-fingerprinted Hugo outputs live under /assets/.
+# No global Cache-Control: Pages revalidates HTML by default. Overlapping
+# header rules would otherwise concatenate conflicting cache directives.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Canonical HTML routes must revalidate. These do not match asset filenames.
+/
+  Cache-Control: public, no-cache
+
+/*/
+  Cache-Control: public, no-cache
+
+/*.html
+  Cache-Control: public, no-cache
 
 /css/*
   Cache-Control: public, max-age=2592000

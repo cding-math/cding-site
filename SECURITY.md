@@ -59,6 +59,19 @@ nonce is not a secure replacement. Inline styles remain permitted for KaTeX.
 
 ## Hosting and account controls
 
+### 2026-10-27 asset update
+
+- Production CSS, JavaScript, and selected font subsets are fingerprinted into
+  `/assets/`; immutable caching is confined to that namespace.
+- Canonical HTML routes explicitly revalidate. Global cache headers were removed
+  to avoid conflicting values from overlapping Cloudflare `_headers` rules.
+- Font licenses are included through exact static allowlist entries. Source
+  fonts, generation scripts, design documentation, and local previews stay out
+  of the published output.
+- Existing CSP, request isolation, and other security headers are retained.
+- `scripts/verify_build.py` checks published paths, asset hashes/SRI, licenses,
+  font budgets, preload reuse, and cache-rule separation.
+
 Build with `hugo --cleanDestinationDir`, deploy only `public/`, and review the
 output before publishing. Keep HTTPS redirects, TLS 1.2 or newer, Cloudflare's
 bot and DDoS protections, DNSSEC, and domain transfer protection enabled.

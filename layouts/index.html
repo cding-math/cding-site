@@ -1,6 +1,12 @@
 {{ define "main" }}
 <header class="site-header">
-  <h1 class="site-title">{{ .Title }}</h1>
+  <h1 class="site-title">
+    <button class="name-toggle" type="button" aria-pressed="false" aria-describedby="name-help">
+      {{ partial "name-text.html" . }}
+    </button>
+    <span class="name-static">{{ partial "name-text.html" . }}</span>
+  </h1>
+  <p class="visually-hidden" id="name-help">Hover or focus to reveal the Chinese name. Activate to show or hide it. Press Escape to hide it.</p>
   <div class="intro">
     <div class="intro-text site-subtitle">
       {{ .Content }}

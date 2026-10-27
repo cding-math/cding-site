@@ -16,6 +16,8 @@ files = [
   'css/*.css',
   'js/*.js',
   'fonts/*.woff2',
+  'fonts/ZhuqueFangsong-OFL.txt',
+  'fonts/Inter-OFL.txt',
   'images/*.jpeg',
   'images/*.jpg',
   'images/*.png',
