@@ -5,8 +5,10 @@
 - Read `docs/design-system.md` before changing layout, typography, or interaction.
 - Preserve the approved Zhuque Fangsong name treatment: 72 px heading, three
   upright 24 px glyphs, centered English, and 24 px clearance before the intro.
-- Desktop (at least 800 px, fine pointer with hover): reveal on hover or keyboard
-  focus. Narrow/touch layouts: persistent plain bilingual text, not a button.
+- Chinese starts hidden at every screen width. One button reveals it on hover
+  or keyboard focus and toggles it on tap/activation; outside taps and Escape
+  dismiss it. Width alone selects left annotation (>=800 px) or right (<800 px).
+- Publication titles use weight 550; math retains its regular KaTeX weight.
 - Production source is `assets/css/style.css`, `assets/js/site.js`, `layouts/`,
   `content/`, and `data/`. CSS is a Hugo template because it embeds font URLs.
 - `static/css/style.css` and `static/js/site.js` are frozen compatibility files

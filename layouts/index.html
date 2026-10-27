@@ -4,9 +4,10 @@
     <button class="name-toggle" type="button" aria-pressed="false" aria-describedby="name-help">
       {{ partial "name-text.html" . }}
     </button>
+    {{- /* Print-only fallback; screen layouts all use the same reveal control. */}}
     <span class="name-static">{{ partial "name-text.html" . }}</span>
   </h1>
-  <p class="visually-hidden" id="name-help">Hover or focus to reveal the Chinese name. Activate to show or hide it. Press Escape to hide it.</p>
+  <p class="visually-hidden" id="name-help">Hover or focus to reveal the Chinese name. Tap or activate to show or hide it. Tap elsewhere or press Escape to hide it.</p>
   <div class="intro">
     <div class="intro-text site-subtitle">
       {{ .Content }}

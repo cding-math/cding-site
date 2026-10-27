@@ -1,5 +1,22 @@
 # Project handoff — 2026-10-27
 
+## Latest approved revision
+
+The user approved publication titles at weight **550** and one reveal behavior
+at every screen width. Chinese starts hidden; hover/keyboard focus reveals it,
+tapping toggles it, and outside taps or Escape dismiss it. Width alone chooses
+left annotation at 800 px and above or right of English below that. Math,
+reserved geometry, subtle transition and reduced-motion support are retained.
+This supersedes the earlier persistent-mobile design. See the updated
+[design specification](design-system.md) and reference captures.
+
+Local checks passed: Hugo 0.157.0 build, artifact validation, math cache and JS
+syntax; mouse/keyboard/touch event sequences; browser reveal and placement at
+1280 px and 402 px with unchanged intro positions. Cold Slow 4G Lighthouse
+checks against the Hugo preview measured CLS 0.000172 desktop and 0.000287
+mobile. These local timings include development-server behavior and are not
+new live-site benchmarks. Physical-phone touch behavior was not tested.
+
 ## Status
 
 The approved bilingual-name design and loading fixes are complete and live at
@@ -14,8 +31,9 @@ checks. There is no unfinished implementation from this session.
 | `d9a9595` | Content-hashed copies of the two active math fonts. |
 | `2c27a63` | Final live audit, screenshots and reproducible Lighthouse runner. |
 
-Later cleanup commits update guidance and organization; they do not alter the
-rendered site. Use `git log` and the exact Cloudflare check for current status.
+The later cleanup commit `4dce8f7` only consolidated guidance. The latest
+interaction/weight revision is described above. Use `git log` and the exact
+Cloudflare check for current status.
 
 ## Where to start
 
@@ -34,8 +52,9 @@ rendered site. Use `git log` and the exact Cloudflare check for current status.
 ## Decisions to preserve
 
 - English: Changying Ding. Chinese: 丁长缨, using Zhuque Fangsong v0.212.
-  Desktop reveals on hover/keyboard focus; mobile/touch displays plain text
-  persistently. No visible hint or theme/grid toolbar belongs in production.
+  It starts hidden at every width. One control supports hover, keyboard and tap;
+  width only selects its left/right placement. No visible hint or theme/grid
+  toolbar belongs in production. Publication titles use Inter weight 550.
 - The shared 72 px heading comprises three 24 px upright Chinese cells; English
   is centered against the full column. The intro starts 24 px below it. Preserve
   the 8 px spacing scale and page-wide alignments in the design specification.
@@ -54,7 +73,8 @@ rendered site. Use `git log` and the exact Cloudflare check for current status.
 
 ## Verification and limits
 
-Final live mobile Slow 4G: first content 0.611 s, largest content 1.340 s,
+Earlier loading audit (`d9a9595`, before the interaction/weight revision):
+mobile Slow 4G: first content 0.611 s, largest content 1.340 s,
 CLS 0.000287 (formerly 0.077907). Warm load: 0.246 s, zero CLS and zero font
 transfers. Chinese finished before first paint in every cold test. The final
 matrix, cache evidence and screenshots are committed in the audit directory.
@@ -82,8 +102,9 @@ or pre-authorized; re-evaluate only when a future task requires it.
 
 Rollback uses reviewed Git reverts of the relevant implementation commits,
 followed by an authorized push. Do not reset shared history. For a full rollback
-of today's feature, review `d3d0aed`, `abe00ec` and `d9a9595` together, in reverse
-order; reverting only one may leave dependent changes.
+of today's feature, review the latest interaction/weight revision together
+with `d3d0aed`, `abe00ec` and `d9a9595`, in reverse order; reverting only one
+may leave dependent changes.
 
 ## Workspace housekeeping
 

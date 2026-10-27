@@ -193,6 +193,10 @@ a:hover {
   line-height: 1.6;
 }
 
+.pub-list li > strong {
+  font-weight: 550;
+}
+
 .pub-num {
   position: absolute;
   left: 0;
@@ -326,7 +330,7 @@ a:hover {
   white-space: nowrap;
   border: 0;
 }
-/* Approved design: one page grid, one spacing scale, two reading modes.
+/* One reveal behavior at every width; the grid determines placement only.
    Desktop width: 24 outer + 24 annotation + 24 gutter + 672 main + 24 outer.
    At <800 px the annotation joins the heading; at <=600 px the intro stacks. */
 .site-home {
@@ -425,19 +429,6 @@ a:hover {
     padding-right: calc(var(--name-cell) + var(--column-gap));
   }
   .site-home .name-chinese { left: auto; right: 0; }
-}
-
-/* Narrow layouts and touch devices present a plain bilingual heading.
-   Only wide, hover-capable screens expose an interactive reveal control. */
-@media (max-width: 799px), (hover: none), (pointer: coarse) {
-  .site-home .name-toggle,
-  .site-home #name-help { display: none; }
-  .site-home .name-static { display: grid; }
-  .site-home .name-static .name-chinese {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
 
 @media (max-width: 600px) {

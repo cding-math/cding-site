@@ -1,6 +1,6 @@
 # Approved design system: cding.me
 
-Approved on 2026-10-27. These rules govern the production homepage. The sibling
+Approved and revised on 2026-10-27. These rules govern the production homepage. The sibling
 `name-reveal-demo/` retains the exploratory prototypes; it is not deployed.
 
 ## Composition
@@ -8,9 +8,11 @@ Approved on 2026-10-27. These rules govern the production homepage. The sibling
 The vertical name occupies an annotation column within the page composition.
 The English heading, biography, section headings, publication numbers, and
 contact block share one main left edge. The photograph shares the main right
-edge. On wide, hover-capable screens the annotation appears on hover or keyboard
-focus. Narrow layouts and touch devices show a persistent, noninteractive
-bilingual heading.
+edge. The Chinese name is a quiet, optional personal detail: hidden by default
+at every width, revealed through hover, keyboard focus or tap. Viewport width
+controls placement; input method controls interaction. A narrow desktop window
+uses the right-hand placement with hover, while a wide touchscreen uses the
+left annotation with tap.
 
 Desktop, at the maximum width:
 
@@ -39,6 +41,10 @@ a 200 px photograph. These dimensions all use an 8 px spacing unit.
   visibility state. The desktop introduction therefore starts at 160 px;
   the mobile portrait starts at 128 px.
 - Body text: 17/28 px. Paragraph gap: 16 px. Publication-row gap: 24 px.
+- Publication titles: 17/28 px, Inter weight 550. This softens the former bold
+  700 without removing the distinction from coauthors and links. The existing
+  variable font supplies 550 with no extra download. Mathematical symbols keep
+  KaTeX's regular weight and native shapes; do not force synthetic bold math.
 - Major section gap: 64 px desktop; 48 px mobile.
 
 ## Responsive behavior
@@ -49,12 +55,22 @@ between it and the English text (16 px on screens up to 340 px wide). This align
 its right edge with the page grid. The Chinese glyphs are 20% larger than the
 previous compact version: 24 px instead of 20 px, occupying the full heading row.
 
-At 800 px and wider with a fine, hover-capable pointer, the name is a native
-button that reveals Chinese on mouse entry or keyboard focus. Activation can
-toggle it; Escape dismisses it. Its space remains reserved. On smaller layouts,
-or devices without hover, CSS swaps it for plain bilingual text: no unneeded
-button role, hidden action, or discoverability hint. Resizing resets transient
-interaction state; both representations share the same typography partial.
+At 800 px and wider, Chinese occupies the existing left annotation column;
+below 800 px it appears on the English name's right, inside the heading grid.
+No hover/pointer media query selects placement or makes the name persistent.
+
+All screen widths use the same native button. Mouse entry or keyboard focus
+reveals Chinese; activation toggles visibility. A touch tap reveals it and a
+second tap dismisses it. Tapping elsewhere, Escape or leaving keyboard focus
+also dismisses it. Mouse exit hides an unselected hover reveal. The 220 ms fade
+and 3 px entrance motion remain restrained; reduced motion removes the transition.
+
+The name's space is always reserved. Resizing changes CSS placement without
+explicitly resetting the reveal state; ordinary pointer/focus events still apply.
+No visible hint is added. Screen readers receive a stable bilingual name and
+hidden interaction instructions; the focus outline is for keyboard navigation.
+The plain `.name-static` representation is now print-only, where both names
+remain visible without requiring interaction.
 
 At 600 px and below, the portrait sits above the biography and fills the same
 content width. The heading, portrait, biography, and later sections all share
@@ -69,7 +85,7 @@ Canonical implementation:
 
 - `assets/css/style.css`: spacing tokens, grid, typography, breakpoints, themes.
 - `layouts/index.html` and `layouts/partials/name-text.html`: accessible markup.
-- `assets/js/site.js`: desktop reveal; mobile remains ordinary heading text.
+- `assets/js/site.js`: one hover/focus/tap state machine, independent of width.
 - `docs/font-build.md`: approved glyph provenance and deterministic subsetting.
 
 The production build fingerprints its CSS, JavaScript, and font resources. The
@@ -78,8 +94,9 @@ Adjust named tokens and shared alignments rather than isolated pixel offsets.
 
 Reference captures: `design-reference-desktop.png` and
 `design-reference-mobile.png` in this directory. They are repository guidance,
-not public website assets. The desktop capture shows keyboard reveal; the mobile
-capture shows the persistent heading.
+not public website assets. Both captures show keyboard reveal, with Chinese
+placed on opposite sides according to width. Chinese starts hidden on both.
+Older captures in the performance audit preserve their original tested revision.
 
 ## Phone review presets
 
@@ -101,12 +118,17 @@ responsive CSS rather than device detection.
 
 ## Browser verification
 
-The visible Chinese and English blocks have equal vertical centers in desktop
-and all six phone presets. Each heading is 72 px high, followed by 24 px of clear
-space, and none of the phone presets has horizontal overflow. Desktop mouse
-entry/exit, keyboard focus, and Escape were exercised. The mobile accessibility
-tree exposes the bilingual heading as text, without an inactive toggle control.
-Light and dark appearances were visually inspected.
+The original geometry was reviewed at desktop width and all six phone presets,
+including light/dark appearance. The later interaction revision preserves those
+spacing tokens. It was checked locally at 1280 px and 402 px: hidden/revealed
+states keep the heading at 72 px and the introduction at document y=160/128 px,
+with no horizontal overflow. Keyboard reveal and Escape work at both widths;
+resizing a revealed heading moves the annotation while retaining its state.
+
+Mouse entry/exit, touch first/second tap, outside dismissal, keyboard and pointer
+cancellation sequences were also checked against the actual event handlers.
+These checks do not constitute testing on a physical phone. The mobile
+accessibility tree now exposes an operable toggle button rather than static text.
 
 ## Loading stability
 

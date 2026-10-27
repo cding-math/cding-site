@@ -9,20 +9,19 @@ if (emailContainer) {
   emailContainer.appendChild(link);
 }
 
-// The mobile/touch heading is plain text. Only wide, fine-pointer layouts
-// expose this native control; CSS also supports hover/focus without JavaScript.
+// One reveal control works with mouse, keyboard, and touch at every width.
+// CSS alone chooses the annotation's position, including during a resize.
 (() => {
   const button = document.querySelector('.name-toggle');
   if (!button) return;
-  const mode = window.matchMedia('(min-width: 800px) and (hover: hover) and (pointer: fine)');
   let hovering = button.matches(':hover');
   let keyboardFocused = button.matches(':focus-visible');
   let selected = false;
   let dismissed = false;
 
   function render() {
-    button.setAttribute('aria-pressed', String(mode.matches &&
-      (selected || ((hovering || keyboardFocused) && !dismissed))));
+    button.setAttribute('aria-pressed', String(
+      selected || ((hovering || keyboardFocused) && !dismissed)));
   }
 
   function dismiss() {
@@ -67,10 +66,5 @@ if (emailContainer) {
   button.addEventListener('pointercancel', dismiss);
   document.addEventListener('pointerdown', event => {
     if (!button.contains(event.target)) dismiss();
-  });
-  mode.addEventListener('change', () => {
-    hovering = false;
-    keyboardFocused = false;
-    dismiss();
   });
 })();

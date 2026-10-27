@@ -8,8 +8,8 @@ containing 丁长缨 only, rather than the 8,824,084-byte upstream TTF. See
 
 The homepage preloads the exact fingerprinted font URL used by CSS, with
 `as="font"`, `type="font/woff2"`, and `crossorigin`. This avoids a separate
-first-hover download and provides the persistent mobile name promptly. The
-tradeoff is a 2.5 KiB download even for desktop visitors who never hover.
+first-interaction download on both mouse and touch devices. The tradeoff is a
+2.5 KiB download even for visitors who never reveal the name.
 
 `font-display: swap` keeps text available if the font is delayed. Fixed glyph
 cells and a reserved 72 px heading prevent the Chinese font from moving the
@@ -85,7 +85,8 @@ Before pushing:
 2. Run `python3 scripts/verify_build.py public`, `node scripts/render_math.mjs --check`,
    and the JavaScript syntax check.
 3. Compare desktop and mobile geometry against `design-system.md` and its
-   reference screenshots. Check hover, keyboard, static mobile text, and themes.
+   reference screenshots. Check hidden/revealed states, hover, keyboard, tap
+   toggling, outside dismissal, responsive placement, and themes.
 4. Ensure docs, scripts, font sources, preview routes, and alternative fonts are
    absent from the generated site; retain required font-license files.
 
