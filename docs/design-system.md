@@ -107,3 +107,12 @@ space, and none of the phone presets has horizontal overflow. Desktop mouse
 entry/exit, keyboard focus, and Escape were exercised. The mobile accessibility
 tree exposes the bilingual heading as text, without an inactive toggle control.
 Light and dark appearances were visually inspected.
+
+## Loading stability
+
+The final typography and geometry above remain authoritative. A preloaded Inter
+core carries identical selected outlines and default shaping; larger coverage
+loads only when needed. Body-only local fallback metrics preserve the biography
+while Inter downloads. These are loading behavior, not a new design variant.
+Mathematics is pre-rendered so titles do not change from raw TeX after paint.
+See `performance.md` and `math-rendering.md` before altering these mechanisms.

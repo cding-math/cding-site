@@ -74,15 +74,3 @@ if (emailContainer) {
     dismiss();
   });
 })();
-
-if (typeof renderMathInElement === 'function') {
-  renderMathInElement(document.body, {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-    ],
-    trust: false,
-    maxExpand: 1000,
-    maxSize: 20,
-  });
-}

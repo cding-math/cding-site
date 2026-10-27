@@ -54,8 +54,10 @@ def check(build):
     require("/assets/" + name_font.name in css, "CSS does not use the fingerprinted font")
     require((build / "fonts/ZhuqueFangsong-OFL.txt").is_file(), "Chinese font license missing")
     latin_fonts = [p for p in assets if p.name.startswith("inter-latin.")]
+    core_fonts = [p for p in assets if p.name.startswith("inter-core.")]
     require(len(latin_fonts) == 1 and latin_fonts[0].stat().st_size <= 256 * 1024, "Latin subset missing or budget exceeded")
-    require(latin_fonts[0].stat().st_size + name_font.stat().st_size < (build / "fonts/InterVariable.woff2").stat().st_size,
+    require(len(core_fonts) == 1 and core_fonts[0].stat().st_size <= 48 * 1024, "Critical Latin font missing or budget exceeded")
+    require(core_fonts[0].stat().st_size + name_font.stat().st_size < (build / "fonts/InterVariable.woff2").stat().st_size,
             "primary font payload no longer improves on the original Inter asset")
     require((build / "fonts/Inter-OFL.txt").is_file(), "Inter license missing")
 
@@ -70,6 +72,7 @@ def check(build):
             require(not any(name.lower().startswith("on") for name in attrs), "inline event handler found")
             if tag == "script":
                 require(bool(attrs.get("src")), "inline application script found")
+                require('/vendor/katex/' not in attrs.get('src',''), "client-side math rendering returned to the loading path")
             reference = attrs.get("src") if tag in {"script", "img"} else attrs.get("href") if tag == "link" else None
             if reference:
                 url = urlsplit(reference)
@@ -85,10 +88,12 @@ def check(build):
                 preloads.append(attrs["href"])
         if page_path == build / "index.html":
             require(preloads.count("/assets/" + name_font.name) == 1, "homepage needs exactly one name-font preload")
-            require(preloads.count("/assets/" + latin_fonts[0].name) == 1, "homepage needs exactly one Latin-font preload")
+            require(preloads.count("/assets/" + core_fonts[0].name) == 1, "homepage needs exactly one core-font preload")
+            require("/assets/" + latin_fonts[0].name not in preloads, "broad Latin font should load only on demand")
             require(len(preloads) == len(set(preloads)), "duplicate font preload")
             require(all(character in source for character in "丁长缨"), "name markup missing")
             require('class="site-home"' in source, "homepage grid class missing")
+            require('class="katex"' in source and '<math ' in source, "math must be pre-rendered with accessible MathML")
         else:
             require(not preloads, "non-home page unnecessarily preloads heading fonts")
         page_count += 1
@@ -116,7 +121,7 @@ def check(build):
     print(f"PASS: {page_count} HTML pages; resource paths, fingerprints, SRI, licenses, and cache rules verified.")
     print(f"Chinese font: {name_font.stat().st_size:,} bytes; CSS + JS gzip estimate: {compressed_code:,} bytes.")
     if latin_fonts:
-        print(f"Inter Latin subset: {latin_fonts[0].stat().st_size:,} bytes.")
+        print(f"Inter core: {core_fonts[0].stat().st_size:,} bytes; on-demand broad Latin: {latin_fonts[0].stat().st_size:,} bytes.")
 
 
 if __name__ == "__main__":

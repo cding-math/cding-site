@@ -22,7 +22,8 @@ self-hosted; the Chinese name uses a checked-in three-character WOFF2 subset.
 
 - [Approved design system](docs/design-system.md)
 - [Font provenance and reproducible Chinese subset](docs/font-build.md)
-- [Inter Latin subset](docs/inter-font-build.md)
+- [Inter core subset](docs/inter-core-font-build.md) and [broad Latin](docs/inter-font-build.md)
+- [Stable math rendering](docs/math-rendering.md)
 - [Performance and deployment](docs/performance.md)
 - [Security notes](SECURITY.md)
 - [Agent guidance](AGENTS.md)
@@ -32,6 +33,7 @@ self-hosted; the Chinese name uses a checked-in three-character WOFF2 subset.
 ```sh
 hugo --cleanDestinationDir
 node --check assets/js/site.js
+node scripts/render_math.mjs --check
 python3 scripts/verify_build.py public
 ```
 

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "desktop-fast-cold",
+    "url": "http://127.0.0.1:1316/",
+    "fetchTime": "2026-10-27T19:18:25.173Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 0,
+        "throughputKbps": 0,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "provided",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 127.864,
+    "LCP": 127.864,
+    "CLS": 0,
+    "TBT": 0,
+    "SI": 129,
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:1316/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "transferSize": 38427,
+        "resourceSize": 38136,
+        "networkRequestTime": 67.21099996566772,
+        "networkEndTime": 71.39699995517731
+      },
+      {
+        "url": "http://127.0.0.1:1316/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 2862,
+        "resourceSize": 2572,
+        "networkRequestTime": 67.29299998283386,
+        "networkEndTime": 72.27799999713898
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 16731,
+        "resourceSize": 16440,
+        "networkRequestTime": 113.06000006198883,
+        "networkEndTime": 114.23800003528595
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 26563,
+        "resourceSize": 26272,
+        "networkRequestTime": 113.11699998378754,
+        "networkEndTime": 114.8639999628067
+      }
+    ]
+  },
+  {
+    "id": "desktop-slow4g-cold",
+    "url": "http://127.0.0.1:1316/",
+    "fetchTime": "2026-10-27T19:18:38.383Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 598.186,
+    "LCP": 598.186,
+    "CLS": 0.0001725835376315646,
+    "TBT": 0,
+    "SI": 638,
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:1316/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "transferSize": 38427,
+        "resourceSize": 38136,
+        "networkRequestTime": 211.9539999961853,
+        "networkEndTime": 963.5709999799728
+      },
+      {
+        "url": "http://127.0.0.1:1316/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 2862,
+        "resourceSize": 2572,
+        "networkRequestTime": 212.04199993610382,
+        "networkEndTime": 428.68099999427795
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 16731,
+        "resourceSize": 16440,
+        "networkRequestTime": 487.51199996471405,
+        "networkEndTime": 978.0939999818802
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 26563,
+        "resourceSize": 26272,
+        "networkRequestTime": 487.5920000076294,
+        "networkEndTime": 1073.538999915123
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow4g-cold",
+    "url": "http://127.0.0.1:1316/",
+    "fetchTime": "2026-10-27T19:18:52.871Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 602.649,
+    "LCP": 1174.548,
+    "CLS": 0.0002874797488034902,
+    "TBT": 0,
+    "SI": 872,
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:1316/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "transferSize": 38427,
+        "resourceSize": 38136,
+        "networkRequestTime": 208.9340000152588,
+        "networkEndTime": 939.0900000333786
+      },
+      {
+        "url": "http://127.0.0.1:1316/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 2862,
+        "resourceSize": 2572,
+        "networkRequestTime": 208.99500000476837,
+        "networkEndTime": 418.16799998283386
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 16731,
+        "resourceSize": 16440,
+        "networkRequestTime": 482.27800011634827,
+        "networkEndTime": 967.4409999847412
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 26563,
+        "resourceSize": 26272,
+        "networkRequestTime": 482.47300004959106,
+        "networkEndTime": 1063.4509999752045
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow4g-warm",
+    "url": "http://127.0.0.1:1316/",
+    "fetchTime": "2026-10-27T19:19:06.731Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": true,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 233.237,
+    "LCP": 233.237,
+    "CLS": 0,
+    "TBT": 0,
+    "SI": 248,
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:1316/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "transferSize": 0,
+        "resourceSize": 38136,
+        "networkRequestTime": 165.57799994945526,
+        "networkEndTime": 167.71299993991852
+      },
+      {
+        "url": "http://127.0.0.1:1316/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 0,
+        "resourceSize": 2572,
+        "networkRequestTime": 165.635999917984,
+        "networkEndTime": 166.9079999923706
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 0,
+        "resourceSize": 16440,
+        "networkRequestTime": 201.37000000476837,
+        "networkEndTime": 203.05200004577637
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 0,
+        "resourceSize": 26272,
+        "networkRequestTime": 201.43299996852875,
+        "networkEndTime": 203.15699994564056
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow3g-cold",
+    "url": "http://127.0.0.1:1316/",
+    "fetchTime": "2026-10-27T19:19:20.338Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 400,
+        "throughputKbps": 400,
+        "requestLatencyMs": 400,
+        "downloadThroughputKbps": 400,
+        "uploadThroughputKbps": 400,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 0.86,
+    "warnings": [],
+    "FCP": 1460.807,
+    "LCP": 4151.711,
+    "CLS": 0.0002874797488034902,
+    "TBT": 0,
+    "SI": 2675,
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:1316/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "transferSize": 38427,
+        "resourceSize": 38136,
+        "networkRequestTime": 504.68099999427795,
+        "networkEndTime": 3428.826999902725
+      },
+      {
+        "url": "http://127.0.0.1:1316/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 2862,
+        "resourceSize": 2572,
+        "networkRequestTime": 504.74199998378754,
+        "networkEndTime": 1145.920000076294
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 16731,
+        "resourceSize": 16440,
+        "networkRequestTime": 1343.4259999990463,
+        "networkEndTime": 3109.858999967575
+      },
+      {
+        "url": "http://127.0.0.1:1316/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 26563,
+        "resourceSize": 26272,
+        "networkRequestTime": 1343.4750000238419,
+        "networkEndTime": 3607.961000084877
+      }
+    ]
+  }
+]

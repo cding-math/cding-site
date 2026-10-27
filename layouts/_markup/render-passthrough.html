@@ -1,0 +1,7 @@
+{{- $mode := cond (eq .Type "block") "display" "inline" -}}
+{{- $math := index site.Data.math_rendered $mode (strings.TrimSpace .Inner) -}}
+{{- if not $math -}}
+  {{- errorf "Missing pre-rendered math %q. Add it to data/math_expressions.json and run node scripts/render_math.mjs." .Inner -}}
+{{- end -}}
+{{- $math | safeHTML -}}
+{{- .Page.Store.Set "hasMath" true -}}

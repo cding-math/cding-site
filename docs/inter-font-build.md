@@ -46,7 +46,9 @@ U+FEFF       Zero-width no-break space, if present
 U+FFFD       Replacement character, if present
 ```
 
-The matching CSS `unicode-range` is:
+The combined core/broad CSS coverage is shown below. Production partitions it
+into disjoint ranges; see `inter-core-font-build.md`. Do not restore this entire
+range on the broad face, which would overlap the preloaded core.
 
 ```css
 unicode-range: U+0000-024F, U+0300-036F, U+1E00-1EFF, U+2000-206F,

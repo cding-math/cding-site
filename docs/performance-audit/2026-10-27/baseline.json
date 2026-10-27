@@ -1,0 +1,482 @@
+[
+  {
+    "id": "desktop-fast-cold",
+    "url": "https://cding.me/",
+    "fetchTime": "2026-10-27T18:31:45.993Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 0,
+        "throughputKbps": 0,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "provided",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 0.99,
+    "warnings": [],
+    "FCP": 796.091,
+    "LCP": 796.091,
+    "CLS": 0.00485078125,
+    "TBT": 0,
+    "SI": 798,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-latin.5b0a8c4fbc73f3f5ac78c41b9f76874a86ed83e7e53f286e80209bc4048b08ef.woff2",
+        "transferSize": 200279,
+        "resourceSize": 199328,
+        "networkRequestTime": 515.3270000219345,
+        "networkEndTime": 574.8079999685287
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 3497,
+        "resourceSize": 2572,
+        "networkRequestTime": 515.4609999656677,
+        "networkEndTime": 587.9169999361038
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 27221,
+        "resourceSize": 26272,
+        "networkRequestTime": 619.7360000610352,
+        "networkEndTime": 642.6850000619888
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 17386,
+        "resourceSize": 16440,
+        "networkRequestTime": 619.8460000753403,
+        "networkEndTime": 675.9650000333786
+      }
+    ]
+  },
+  {
+    "id": "desktop-slow4g-cold",
+    "url": "https://cding.me/",
+    "fetchTime": "2026-10-27T18:32:00.026Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 618.298,
+    "LCP": 618.298,
+    "CLS": 0.01865377057393392,
+    "TBT": 0,
+    "SI": 683,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-latin.5b0a8c4fbc73f3f5ac78c41b9f76874a86ed83e7e53f286e80209bc4048b08ef.woff2",
+        "transferSize": 200270,
+        "resourceSize": 199328,
+        "networkRequestTime": 219.2790001630783,
+        "networkEndTime": 2495.929000020027
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 3497,
+        "resourceSize": 2572,
+        "networkRequestTime": 219.3470001220703,
+        "networkEndTime": 517.7270001173019
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 27221,
+        "resourceSize": 26272,
+        "networkRequestTime": 1594.5550001859665,
+        "networkEndTime": 2195.573000073433
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 17386,
+        "resourceSize": 16440,
+        "networkRequestTime": 1594.6470001935959,
+        "networkEndTime": 2027.8310000896454
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow4g-cold",
+    "url": "https://cding.me/",
+    "fetchTime": "2026-10-27T18:32:15.890Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 0.99,
+    "warnings": [],
+    "FCP": 871.265,
+    "LCP": 1742.353,
+    "CLS": 0.07790722807593294,
+    "TBT": 44.04300000000012,
+    "SI": 1296,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-latin.5b0a8c4fbc73f3f5ac78c41b9f76874a86ed83e7e53f286e80209bc4048b08ef.woff2",
+        "transferSize": 200277,
+        "resourceSize": 199328,
+        "networkRequestTime": 453.99300014972687,
+        "networkEndTime": 2733.6370000839233
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 3497,
+        "resourceSize": 2572,
+        "networkRequestTime": 454.05599999427795,
+        "networkEndTime": 761.8780000209808
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 27221,
+        "resourceSize": 26272,
+        "networkRequestTime": 1870.4410001039505,
+        "networkEndTime": 2461.3290001153946
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 17386,
+        "resourceSize": 16440,
+        "networkRequestTime": 1870.4910000562668,
+        "networkEndTime": 2308.334000110626
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow4g-warm",
+    "url": "https://cding.me/",
+    "fetchTime": "2026-10-27T18:32:31.622Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1600,
+        "requestLatencyMs": 150,
+        "downloadThroughputKbps": 1600,
+        "uploadThroughputKbps": 750,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": true,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 1,
+    "warnings": [],
+    "FCP": 386.78,
+    "LCP": 386.78,
+    "CLS": 0,
+    "TBT": 0,
+    "SI": 404,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-latin.5b0a8c4fbc73f3f5ac78c41b9f76874a86ed83e7e53f286e80209bc4048b08ef.woff2",
+        "transferSize": 0,
+        "resourceSize": 199328,
+        "networkRequestTime": 175.91000020503998,
+        "networkEndTime": 177.65000009536743
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 0,
+        "resourceSize": 2572,
+        "networkRequestTime": 175.97100019454956,
+        "networkEndTime": 177.3750001192093
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 920,
+        "resourceSize": 26272,
+        "networkRequestTime": 421.1860001087189,
+        "networkEndTime": 582.603000164032
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 922,
+        "resourceSize": 16440,
+        "networkRequestTime": 421.2460001707077,
+        "networkEndTime": 573.7410000562668
+      }
+    ]
+  },
+  {
+    "id": "mobile-slow3g-cold",
+    "url": "https://cding.me/",
+    "fetchTime": "2026-10-27T18:32:45.171Z",
+    "version": "13.5.0",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 45000,
+      "maxWaitForLoad": 60000,
+      "pauseAfterFcpMs": 5250,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 400,
+        "throughputKbps": 400,
+        "requestLatencyMs": 400,
+        "downloadThroughputKbps": 400,
+        "uploadThroughputKbps": 400,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "devtools",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 402,
+        "height": 874,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": true,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "score": 0.77,
+    "warnings": [],
+    "FCP": 1306.087,
+    "LCP": 5769.554,
+    "CLS": 0.07790722807593294,
+    "TBT": 40.88000000000102,
+    "SI": 3163,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-latin.5b0a8c4fbc73f3f5ac78c41b9f76874a86ed83e7e53f286e80209bc4048b08ef.woff2",
+        "transferSize": 200281,
+        "resourceSize": 199328,
+        "networkRequestTime": 491.779000043869,
+        "networkEndTime": 9339.513000011444
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "transferSize": 3533,
+        "resourceSize": 2572,
+        "networkRequestTime": 491.85000002384186,
+        "networkEndTime": 1133.182000041008
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Main-Regular.woff2",
+        "transferSize": 27221,
+        "resourceSize": 26272,
+        "networkRequestTime": 6136.064999938011,
+        "networkEndTime": 7991.880999922752
+      },
+      {
+        "url": "https://cding.me/vendor/katex/0.19.1/fonts/KaTeX_Math-Italic.woff2",
+        "transferSize": 17386,
+        "resourceSize": 16440,
+        "networkRequestTime": 6136.107999920845,
+        "networkEndTime": 7549.775999903679
+      }
+    ]
+  }
+]

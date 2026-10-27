@@ -24,7 +24,7 @@
     {{ range $i, $pub := .Site.Data.publications }}
     <li>
       <span class="pub-num">{{ sub $total $i }}.</span>
-      <strong>{{ $pub.title }}</strong>
+      <strong>{{ $.Page.RenderString (dict "display" "inline") $pub.title }}</strong>
       {{ with .coauthors }}<span class="pub-coauthors">with {{ . | safeHTML }}</span>{{ end }}
       <span class="pub-links">
         {{ if .arxiv }}<a href="{{ .arxiv }}">arXiv:{{ .arxiv_id }}</a>{{ end }}

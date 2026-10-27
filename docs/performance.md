@@ -18,23 +18,36 @@ promise of zero latency or zero layout shift for the entire page.
 
 ## English typography
 
-The original Inter variable font is also subset to broad Latin, Latin Extended,
-combining marks, punctuation, and common symbols. All variable axes and shaping
-features are retained and verified against the source; see `inter-font-build.md`.
-Its CSS alias is `Site Sans`, followed by the unchanged full `Inter` as a fallback
-for future characters outside the subset. Complementary Unicode ranges prevent
-the full fallback from downloading for ordinary Latin text while Site Sans loads.
+The approved Inter outlines and variable axes are unchanged. The homepage now
+preloads a **38,136-byte core** containing its ordinary English characters,
+down from the former 199,328-byte broad-Latin preload. Together with Chinese,
+the primary text fonts total **40,708 bytes** (79.84% below the previous pair).
+See `inter-core-font-build.md` for reproducible generation and fidelity checks.
 
-The Latin file is **199,328 bytes**, down from **352,240 bytes** (43.41% smaller).
-Together with the 2,572-byte Chinese subset, the two primary fonts total 201,900
-bytes, below the previous single Inter download. These are file-size measures,
-not a promise of a particular network latency.
+The 199,328-byte broad Latin subset remains available on demand for accents and
+other non-core characters; the unchanged 352,240-byte full Inter covers other
+scripts. Disjoint CSS Unicode ranges prevent those files from loading as an
+interim fallback for ordinary English. Future content can legitimately trigger
+additional font downloads and must be rechecked.
 
-The homepage preloads this smaller Latin file and uses `font-display: swap`.
-This avoids the previous `optional` behavior keeping a fallback face for an
-entire slow first visit. Text remains visible during loading; early discovery and
-the smaller payload reduce the delay before the approved typography appears.
-The font is not a reason to delay the whole page behind a loading state.
+All primary faces use `font-display: swap`: text remains readable during loading.
+The 17 px biography uses local Arial/Liberation Sans or Roboto fallbacks with
+calibrated size and line metrics to keep its line breaks stable. These aliases
+add no network requests and do not affect the final Inter appearance. They are
+approximations specific to the current text and typography, not universal
+identity between fonts. Recheck cold-cache layouts after editing biography,
+weights, sizes, widths, or fallback order. A physical Android device has not
+been tested; mobile Chromium emulation on macOS still uses the host's fonts.
+
+Math arrives pre-rendered with the existing KaTeX 0.19.1 renderer, removing its
+client-side reformatting and approximately 79 KB compressed JavaScript from the
+loading path. Its two currently used font faces also use `swap`. See
+`math-rendering.md` for the checked-in cache and maintenance workflow.
+
+Measured before/after results and their limits are in
+[the 2026-10-27 audit](performance-audit/2026-10-27/README.md). Font completion,
+first visible text, and largest-content paint are different events; do not
+promise instant loading or zero shift on every device/network.
 
 ## Versioning and cache policy
 
@@ -68,7 +81,8 @@ installation, font tooling, font service, Worker, or runtime backend.
 Before pushing:
 
 1. Build cleanly with the configured Hugo version.
-2. Run `python3 scripts/verify_build.py public` and the JavaScript syntax check.
+2. Run `python3 scripts/verify_build.py public`, `node scripts/render_math.mjs --check`,
+   and the JavaScript syntax check.
 3. Compare desktop and mobile geometry against `design-system.md` and its
    reference screenshots. Check hover, keyboard, static mobile text, and themes.
 4. Ensure docs, scripts, font sources, preview routes, and alternative fonts are

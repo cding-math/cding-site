@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{- $nameFont := resources.Get "fonts/zhuque-name.woff2" | resources.Copy "assets/zhuque-name.woff2" | fingerprint "sha256" -}}
   {{- $latinFont := resources.Get "fonts/inter-latin.woff2" | resources.Copy "assets/inter-latin.woff2" | fingerprint "sha256" -}}
-  {{- $styles := resources.Get "css/style.css" | resources.ExecuteAsTemplate "assets/site.css" (dict "NameFont" $nameFont "LatinFont" $latinFont) | minify | fingerprint "sha256" -}}
+  {{- $coreFont := resources.Get "fonts/inter-core.woff2" | resources.Copy "assets/inter-core.woff2" | fingerprint "sha256" -}}
+  {{- $styles := resources.Get "css/style.css" | resources.ExecuteAsTemplate "assets/site.css" (dict "NameFont" $nameFont "LatinFont" $latinFont "CoreFont" $coreFont) | minify | fingerprint "sha256" -}}
   {{- $script := resources.Get "js/site.js" | resources.Copy "assets/site.js" | minify | fingerprint "sha256" -}}
 {{ if .IsHome }}
-  <link rel="preload" href="{{ $latinFont.RelPermalink }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ $coreFont.RelPermalink }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ $nameFont.RelPermalink }}" as="font" type="font/woff2" crossorigin>
 {{ end }}
-  <title>{{ .Title }}</title>{{ if or .IsHome .Params.katex }}
+  {{- $renderContent := .WordCount -}}
+  <title>{{ .Title }}</title>{{ if or .IsHome .Params.katex (.Store.Get "hasMath") }}
   <link rel="stylesheet" href="/vendor/katex/0.19.1/katex.min.css">
-  <script defer src="/vendor/katex/0.19.1/katex.min.js"></script>
-  <script defer src="/vendor/katex/0.19.1/contrib/auto-render.min.js"></script>
 {{ end }}
   <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">

@@ -27,7 +27,9 @@ been found.
 - Inline application scripts and the `onload` handler were replaced with a
   deferred local script. Email assembly uses DOM text properties rather than
   `innerHTML`. Math rendering explicitly disables trusted commands and retains
-  bounded expansion and sizing. Publication titles are escaped. Markdown uses
+  bounded expansion and sizing. It now runs in a maintainer-only script; Hugo
+  consumes its checked-in cache. Publication titles pass through Markdown with
+  raw HTML disabled. Markdown uses
   Hugo's default, which does not render raw HTML. Existing coauthor links in
   `data/publications.yaml` remain trusted, author-maintained HTML.
 - Browser response headers block framing, object embeds, inline event handlers,

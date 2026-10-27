@@ -30,3 +30,11 @@ files = [
   'vendor/katex/0.19.1/fonts/*.woff',
   'vendor/katex/0.19.1/fonts/*.ttf',
 ]
+
+# Keep math in its final form in the first HTML response. The render hook only
+# consumes the checked-in, verified KaTeX cache; no Node runtime is needed here.
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]

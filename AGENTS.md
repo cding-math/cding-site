@@ -14,8 +14,14 @@
   filename with immutable caching. Preserve CSP and the static-file allowlist.
 - Font artifacts are checked in. Cloudflare builds run Hugo only; do not add
   remote font requests, npm, Python, or font generation to the deployment build.
-- See `docs/font-build.md` and `docs/inter-font-build.md` before changing fonts.
+- See `docs/font-build.md`, `docs/inter-font-build.md`, and
+  `docs/inter-core-font-build.md` before changing fonts.
   Changing Chinese characters requires regenerating and verifying the subset.
+- Math is pre-rendered using a checked-in KaTeX cache. See
+  `docs/math-rendering.md`; new expressions require regeneration. Keep the
+  Cloudflare build Hugo-only and run `node scripts/render_math.mjs --check`.
+- Recheck throttled cold loads after content/typography changes; see
+  `docs/performance.md` and `docs/performance-audit/2026-10-27/README.md`.
 - The sibling `name-reveal-demo/` is a historical local prototype. Do not copy
   its alternate fonts, grid overlays, query overrides, or preview routes into
   production. Keep reusable rules in this repository's `docs/` instead.
