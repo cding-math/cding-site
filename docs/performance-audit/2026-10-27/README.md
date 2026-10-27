@@ -5,7 +5,8 @@
 Measured the live https://cding.me/ before changes (commit `d3d0aed`), then
 compared an isolated local control and the production candidate. The production fix was deployed as `abe00ec`, followed by the math-font cache
 correction `d9a9595`. Cloudflare checks succeeded for both commits. Final live
-measurements below use `d9a9595`.
+measurements below use `d9a9595`. A later approved interaction/weight revision
+(`8a4c604`) has a separate follow-up record below.
 
 Lighthouse 13.5.0 ran in a separate headless Helium/Chromium 156 browser with
 fresh temporary profiles. Desktop: 1280 × 900, device scale 1, CPU 1×. Mobile:
@@ -122,6 +123,34 @@ before the portrait arrives and the completed view with stable paragraph
 positions. `live-desktop.png` and `live-mobile.png` are ordinary browser captures
 of the approved design. Build verification also checks that the hashed math
 font bytes exactly match the existing vendor files.
+
+## Follow-up: unified reveal and title weight 550
+
+Revision `8a4c604` makes Chinese hidden by default at every screen width and
+uses the same hover/focus/tap control everywhere. Width chooses left/right
+placement. Publication titles use weight 550; font files and math rendering
+remain unchanged. The user approved this local preview before deployment.
+
+The exact Cloudflare check passed. The custom domain's new CSS/JS and preloaded
+fonts matched the local production build byte-for-byte; HTML revalidation and
+immutable asset headers were verified. The live browser confirmed hidden initial
+states, keyboard reveal, Escape/outside dismissal, responsive placement, weight
+550 text / 400 math, and no movement of the introduction on reveal.
+
+A follow-up mobile Slow 4G cold/warm run used the same Lighthouse configuration:
+
+| Load | FCP | LCP | CLS |
+| --- | ---: | ---: | ---: |
+| Cold | 1.396 s | 2.142 s | 0.000287 |
+| Warm | 0.247 s | 0.247 s | 0 |
+
+These are individual observations at a later time, not controlled comparisons
+of network latency with the earlier run. Layout stability is unchanged. The
+Chinese font completed at 1.299 s, before FCP; Inter completed at 1.825 s.
+All four fonts transferred zero bytes warm. Font-display checks passed; no
+broad/full Inter or failed asset request appeared. Compact evidence is in
+`reveal-update-live.json`. Physical-phone touch behavior remains untested;
+local event-sequence tests cover first/second tap and outside dismissal.
 
 ## Rechecking
 

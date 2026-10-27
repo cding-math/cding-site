@@ -2,6 +2,9 @@
 
 ## Latest approved revision
 
+Deployed as `8a4c604`; the matching Cloudflare Pages check succeeded. The custom
+domain serves the new fingerprinted CSS/JS and the expected cache headers.
+
 The user approved publication titles at weight **550** and one reveal behavior
 at every screen width. Chinese starts hidden; hover/keyboard focus reveals it,
 tapping toggles it, and outside taps or Escape dismiss it. Width alone chooses
@@ -17,6 +20,15 @@ checks against the Hugo preview measured CLS 0.000172 desktop and 0.000287
 mobile. These local timings include development-server behavior and are not
 new live-site benchmarks. Physical-phone touch behavior was not tested.
 
+After deployment, the live browser confirmed weight 550 for publication titles
+and 400 for math, hidden initial states on wide/narrow screens, left/right
+placement, keyboard activation, Escape/outside dismissal, and unchanged intro
+positions. Updated design reference captures are committed. A live mobile
+Slow 4G follow-up measured FCP/LCP 1.396/2.142 s and CLS 0.000287; warm paint
+was 0.247 s with zero CLS and zero font transfers. The audit's follow-up section
+and `reveal-update-live.json` preserve this revision's evidence separately from
+the earlier loading-optimization measurements.
+
 ## Status
 
 The approved bilingual-name design and loading fixes are complete and live at
@@ -29,7 +41,8 @@ checks. There is no unfinished implementation from this session.
 | `d3d0aed` | Approved bilingual name, reusable grid, self-hosted Chinese subset. |
 | `abe00ec` | Smaller Inter core, stable body fallback, pre-rendered mathematics. |
 | `d9a9595` | Content-hashed copies of the two active math fonts. |
-| `2c27a63` | Final live audit, screenshots and reproducible Lighthouse runner. |
+| `2c27a63` | Initial live audit, screenshots and reproducible Lighthouse runner. |
+| `8a4c604` | Hidden-by-default reveal at every width; publication title weight 550. |
 
 The later cleanup commit `4dce8f7` only consolidated guidance. The latest
 interaction/weight revision is described above. Use `git log` and the exact

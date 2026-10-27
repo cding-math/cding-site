@@ -1,0 +1,217 @@
+{
+  "commit": "8a4c604",
+  "measurements": [
+    {
+      "id": "mobile-slow4g-cold",
+      "url": "https://cding.me/",
+      "fetchTime": "2026-10-27T20:01:59.150Z",
+      "version": "13.5.0",
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 45000,
+        "maxWaitForLoad": 60000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1600,
+          "requestLatencyMs": 150,
+          "downloadThroughputKbps": 1600,
+          "uploadThroughputKbps": 750,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 402,
+          "height": 874,
+          "deviceScaleFactor": 3,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": true,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance"
+        ],
+        "skipAudits": null
+      },
+      "FCP": 1395.995,
+      "LCP": 2141.933,
+      "CLS": 0.0002874797488034902,
+      "TBT": 37.65800000000013,
+      "fonts": [
+        {
+          "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+          "transferSize": 39065,
+          "resourceSize": 38136,
+          "networkRequestTime": 1029.4219999313354,
+          "networkEndTime": 1825.3659999370575
+        },
+        {
+          "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+          "transferSize": 3497,
+          "resourceSize": 2572,
+          "networkRequestTime": 1029.4859999418259,
+          "networkEndTime": 1299.0219999551773
+        },
+        {
+          "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+          "transferSize": 17367,
+          "resourceSize": 16440,
+          "networkRequestTime": 1352.970999956131,
+          "networkEndTime": 1876.8489999771118
+        },
+        {
+          "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+          "transferSize": 27202,
+          "resourceSize": 26272,
+          "networkRequestTime": 1353.4099999666214,
+          "networkEndTime": 2037.958999991417
+        }
+      ]
+    },
+    {
+      "id": "mobile-slow4g-warm",
+      "url": "https://cding.me/",
+      "fetchTime": "2026-10-27T20:02:14.095Z",
+      "version": "13.5.0",
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 45000,
+        "maxWaitForLoad": 60000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1600,
+          "requestLatencyMs": 150,
+          "downloadThroughputKbps": 1600,
+          "uploadThroughputKbps": 750,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 402,
+          "height": 874,
+          "deviceScaleFactor": 3,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": true,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance"
+        ],
+        "skipAudits": null
+      },
+      "FCP": 246.884,
+      "LCP": 246.884,
+      "CLS": 0,
+      "TBT": 0,
+      "fonts": [
+        {
+          "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+          "transferSize": 0,
+          "resourceSize": 38136,
+          "networkRequestTime": 171.06200003623962,
+          "networkEndTime": 172.65100002288818
+        },
+        {
+          "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+          "transferSize": 0,
+          "resourceSize": 2572,
+          "networkRequestTime": 171.1490000486374,
+          "networkEndTime": 173.5659999847412
+        },
+        {
+          "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+          "transferSize": 0,
+          "resourceSize": 16440,
+          "networkRequestTime": 217.62299990653992,
+          "networkEndTime": 218.36800003051758
+        },
+        {
+          "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+          "transferSize": 0,
+          "resourceSize": 26272,
+          "networkRequestTime": 218.20499992370605,
+          "networkEndTime": 218.88199996948242
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+      "bytes": 38136,
+      "sha256": "483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f",
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/site.min.ba6cf08719b54b901fc5180a1f40acf6c44c8ba20f3ec0dd281e6191e0a7b583.css",
+      "bytes": 8633,
+      "sha256": "ba6cf08719b54b901fc5180a1f40acf6c44c8ba20f3ec0dd281e6191e0a7b583",
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/site.min.c7832c92e32d9b94ef1b7ff38afa874d37feefae7d3c12a96e25ee50b2320fff.js",
+      "bytes": 1015,
+      "sha256": "c7832c92e32d9b94ef1b7ff38afa874d37feefae7d3c12a96e25ee50b2320fff",
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+      "bytes": 2572,
+      "sha256": "ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2",
+      "cache": "public, max-age=31536000, immutable"
+    }
+  ]
+}
