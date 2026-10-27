@@ -1,0 +1,142 @@
+[
+  {
+    "case": "desktop-fast-cold",
+    "fontDisplayPassed": true,
+    "failedRequests": [],
+    "broadOrFullInterRequested": false,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      }
+    ]
+  },
+  {
+    "case": "desktop-slow4g-cold",
+    "fontDisplayPassed": true,
+    "failedRequests": [],
+    "broadOrFullInterRequested": false,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      }
+    ]
+  },
+  {
+    "case": "mobile-slow4g-cold",
+    "fontDisplayPassed": true,
+    "failedRequests": [],
+    "broadOrFullInterRequested": false,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      }
+    ]
+  },
+  {
+    "case": "mobile-slow4g-warm",
+    "fontDisplayPassed": true,
+    "failedRequests": [],
+    "broadOrFullInterRequested": false,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": true
+      },
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": true
+      },
+      {
+        "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": true
+      },
+      {
+        "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": true
+      }
+    ]
+  },
+  {
+    "case": "mobile-slow3g-cold",
+    "fontDisplayPassed": true,
+    "failedRequests": [],
+    "broadOrFullInterRequested": false,
+    "fonts": [
+      {
+        "url": "https://cding.me/assets/zhuque-name.ad7da318c3146b76061aa24fe89f05fa12c8dd1bd627998072ca29bab09314a2.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/inter-core.483f80f3caceff6a268b6660b1fba3015b6fcb6d1555c076ed2a0a6ec94cd13f.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-math-italic.7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      },
+      {
+        "url": "https://cding.me/assets/katex-main.c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866.woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "fromDiskCache": false
+      }
+    ]
+  }
+]

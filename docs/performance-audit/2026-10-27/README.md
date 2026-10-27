@@ -3,8 +3,9 @@
 ## Scope and method
 
 Measured the live https://cding.me/ before changes (commit `d3d0aed`), then
-compared an isolated local control and the production candidate. Final live
-verification will be recorded below after Cloudflare publishes the change.
+compared an isolated local control and the production candidate. The production fix was deployed as `abe00ec`, followed by the math-font cache
+correction `d9a9595`. Cloudflare checks succeeded for both commits. Final live
+measurements below use `d9a9595`.
 
 Lighthouse 13.5.0 ran in a separate headless Helium/Chromium 156 browser with
 fresh temporary profiles. Desktop: 1280 × 900, device scale 1, CPU 1×. Mobile:
@@ -53,7 +54,10 @@ are that report's ordered filmstrip frames; they have no recorded trace times.
    before FCP in every cold baseline and final-local scenario. Reserved heading
    dimensions prevent it from moving adjacent page content.
 4. Legacy CDN image/math-font entries retained old conflicting cache headers.
-   Targeted cache refresh and verification are part of final live deployment.
+   A targeted purge corrected ordinary HTTP responses, but the browser still
+   received a stale math-font variant. The final fix copies the two unchanged
+   math fonts to content-hashed URLs; actual browser responses now have one
+   immutable cache directive. All four active fonts transfer zero bytes warm.
 
 ## Final local candidate
 
@@ -77,6 +81,48 @@ letterforms on a sufficiently slow first visit: there is no promise of zero
 font delay. Large paragraph/list jumps were eliminated in these tests; the
 remaining tiny CLS is inline text movement. Warm font transfers were zero.
 
+## Final live measurements
+
+Measured against https://cding.me/ after the final Cloudflare build:
+
+| Scenario | FCP | LCP | CLS |
+| --- | ---: | ---: | ---: |
+| Desktop, actual connection | 0.234 s | 0.234 s | 0.000001 |
+| Desktop, Slow 4G | 0.598 s | 0.598 s | 0.000173 |
+| Mobile, Slow 4G, cold | 0.611 s | 1.340 s | 0.000287 |
+| Mobile, Slow 4G, warm | 0.246 s | 0.246 s | 0.000000 |
+| Mobile, Slow 3G, cold | 1.338 s | 4.578 s | 0.000287 |
+
+Mobile Slow 4G CLS improved from 0.077907 to 0.000287 (99.6% reduction).
+FCP improved from 0.871 s to 0.611 s; LCP from 1.742 s to 1.340 s. Two preceding
+live checks measured essentially the same result: FCP 0.610–0.618 s,
+LCP 1.333–1.337 s, CLS 0.000287. They used identical font bytes/geometry, before
+moving the math faces to content-hashed URLs. Do not read these as statistical
+confidence bounds.
+
+On final Slow 4G mobile, Chinese finished at 0.491 s and Inter at 1.003 s;
+on Slow 3G, at 1.107 s and 2.690 s. Chinese was ready before FCP in every cold
+scenario. On Slow 3G, the portrait remains the largest-content bottleneck
+(LCP 4.578 s); text is already readable at 1.338 s. The English fallback can be
+seen before Inter arrives, but there is no large paragraph or list-row reflow.
+Tiny residual inline movement remains; this is near-zero CLS, not exactly zero.
+
+The warm mobile load paints at 0.246 s, has zero CLS, and transfers zero bytes
+for all four fonts. All final cases passed Lighthouse's font-display audit;
+none requested broad/full Inter, client KaTeX, or a failed asset. Browser
+response headers confirm immutable caching for all active font URLs. Live TBT
+was 0 ms desktop/warm and 42–44 ms on cold emulated mobile; Cloudflare's injected
+scripts remain enabled. Both desktop and Slow 4G mobile performance scores were
+100, while the 400 Kbps stress case scored 83. Scores are secondary to the
+measured timing, filmstrip and layout stability.
+
+`live-final.json` contains the compact measurements; `live-network-checks.json`
+records the browser cache evidence. The timed mobile JPEGs show readable text
+before the portrait arrives and the completed view with stable paragraph
+positions. `live-desktop.png` and `live-mobile.png` are ordinary browser captures
+of the approved design. Build verification also checks that the hashed math
+font bytes exactly match the existing vendor files.
+
 ## Rechecking
 
 Use the same Lighthouse version, dimensions, network values and CPU factors.
@@ -89,3 +135,16 @@ Recheck after biography/publication edits, font updates, grid changes or hosting
 cache changes. Additional scripts/characters can load larger fallback fonts.
 OS-specific fallback availability can change results. Actual iOS/Android
 hardware and real-user monitoring remain outside this audit.
+
+The checked-in `lighthouse-runner.mjs` reproduces these settings using a separate
+headless profile. Copy it to a disposable audit directory, then run:
+
+```sh
+npm install --prefix tooling --no-audit --no-fund --ignore-scripts lighthouse@13.5.0
+CHROME_PATH=/path/to/chromium/executable node lighthouse-runner.mjs rerun https://cding.me/ all
+```
+
+The third argument may select `desktop-fast`, `desktop-slow4g`,
+`mobile-slow4g`, or `mobile-slow3g`; an optional fourth argument sets mobile CSS
+width. Set `CDING_AUDIT_COLD_ONLY=1` to omit the warm repeat. Dependencies and
+profiles belong outside the repository and are not part of the deployment.
