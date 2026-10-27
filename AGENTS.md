@@ -1,6 +1,7 @@
 # Project guidance
 
 - Keep communication concise, precise, and calm.
+- Read `docs/handoff.md` for the completed implementation and maintenance map.
 - Read `docs/design-system.md` before changing layout, typography, or interaction.
 - Preserve the approved Zhuque Fangsong name treatment: 72 px heading, three
   upright 24 px glyphs, centered English, and 24 px clearance before the intro.

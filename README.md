@@ -3,6 +3,9 @@
 Personal academic website for Changying Ding, built with Hugo and deployed by
 Cloudflare Pages from `main`.
 
+Start with the [project handoff](docs/handoff.md) for implementation status,
+measured limitations, and the documentation map.
+
 ## Edit and preview
 
 ```sh
